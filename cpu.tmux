@@ -5,6 +5,7 @@ CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source "$CURRENT_DIR/scripts/helpers.sh"
 
 cpu_interpolation=(
+  "\#{users}"
   "\#{cpu_percentage}"
   "\#{cpu_icon}"
   "\#{cpu_bg_color}"
@@ -23,6 +24,7 @@ cpu_interpolation=(
   "\#{gram_fg_color}"
 )
 cpu_commands=(
+  "#($CURRENT_DIR/scripts/users.sh)"
   "#($CURRENT_DIR/scripts/cpu_percentage.sh)"
   "#($CURRENT_DIR/scripts/cpu_icon.sh)"
   "#($CURRENT_DIR/scripts/cpu_bg_color.sh)"
